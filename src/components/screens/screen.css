@@ -1,0 +1,47 @@
+.wallpaper {
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;   
+}
+
+.wallpaper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    z-index: -1;      
+}
+
+.desktop-icon-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.desktop-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.15); /* Classic OS selection highlight */
+}
+
+.desktop-icon-btn svg {
+    width: 52px;
+    height: 52px;
+    fill: #ffd54f; /* Folder yellow color */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.icon-label {
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: sans-serif;
+}

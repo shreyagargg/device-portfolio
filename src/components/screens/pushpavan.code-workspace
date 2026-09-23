@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../pushpavan"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "disabled"
+	}
+}
