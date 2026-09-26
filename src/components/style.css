@@ -1,60 +1,107 @@
 .wallpaper {
-    position: relative; 
-    width: 100vw; 
-    height: 100vh; 
-    overflow: hidden;   
+  position: relative; 
+  width: 100vw; 
+  height: 100vh; 
+  overflow: hidden;   
 }
 
 .wallpaper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-    z-index: -1;      
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  z-index: -1;      
 }
 
+/* Updated Desktop Content Layout */
 .desktop-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  pointer-events: none; 
+
+  /* Flex column direction with wrap creates standard OS desktop icon columns */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 16px;
 }
 
-.desktop-content .desktop-icon-btn {
-    pointer-events: auto;
-}
-
+/* Fixed Icon Dimensions */
 .desktop-icon-btn {
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background 0.2s;
+  pointer-events: auto;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+
+  /* Explicit size prevents stretching */
+  width: 90px;
+  height: 90px;
+  box-sizing: border-box;
 }
 
 .desktop-icon-btn:hover {
-    background: rgba(255, 255, 255, 0.15); /* Classic OS selection highlight */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .desktop-icon-btn svg {
-    width: 52px;
-    height: 52px;
-    fill: #ffd54f; /* Folder yellow color */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  width: 48px;
+  height: 48px;
+  fill: #ffd54f;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 .icon-label {
-    color: white;
-    font-size: 16px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-    font-family: sans-serif;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.title-bar {
+    background: #000;
+    width: 100%;
+    height: 20px;
+    padding: 8px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title-bar :hover{
+    background-color: red;
+}
+
+.icon{
+    padding: 8px;
+    margin-right: 12px;
+}
+
+.leftSide{
+    overflow-y: visible;
+    width: 20%;
+    height: 100%;
+    padding-left: 150px;
+}
+
+.content{
+    display: flex;
 }

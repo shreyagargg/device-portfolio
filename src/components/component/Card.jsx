@@ -1,22 +1,27 @@
 import React from "react";
 import "../style.css";
+import { PORTFOLIO_SECTIONS } from "../../constants/navigation"
+import { TitleBar } from "./TitleBar";
 
 export function Card(){
-    const list = ["About", "Contact Me", "Projects", "Achievements", "Key Skills", "Education"]
     return(
         <div className="card">
+            <TitleBar />
+            <div className="content">
             <div className="leftSide">
-                <ol>
-                    <li>list[0]</li>
-                    <li>list[1]</li>
-                    <li>list[2]</li>
-                </ol>
+                {PORTFOLIO_SECTIONS.map((section) => (
+                    <h1>{section.label}</h1>
+                ))}
+              
 
             </div>
             <div className="rightSide">
+                   {PORTFOLIO_SECTIONS.map((section) => (
+                    <h1>{section.label}</h1>
+                ))}
 
             </div>
-
+  </div>
 
         </div>
     )
