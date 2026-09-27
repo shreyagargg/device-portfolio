@@ -1,14 +1,15 @@
 import React from "react";
 import "../style.css";
-import {Minimize2, Maximize2, X} from "lucide-react"
+import { Minimize2, Maximize2, X } from "lucide-react"
 
-export function TitleBar(){
-    return(
+export function TitleBar({ onClose }) {
+    return (
         <div className="title-bar">
-            <Minimize2 className="icon" color="#fff"/>
-            <Maximize2 className="icon" color="#fff"/>
-            <X className="icon" color="#fff"/>
+            <div className="windows-button">
+                <Minimize2 className="icon" color="#fff" />
+                <Maximize2 className="icon" color="#fff" />
+                <X className="icon close-icon" color="#fff" onClick={onClose}/>
+            </div>
         </div>
     )
-
 } 

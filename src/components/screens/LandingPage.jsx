@@ -1,9 +1,12 @@
+import { useState } from "react";
 import desktop from "../../assets/desktopWallpaper.png";
 import "../style.css";
 import { PORTFOLIO_SECTIONS } from "../../constants/navigation"
 import { DesktopIcon } from "../component/Folder";
+import { Card } from "../component/Card";
 
 export function LandingPage() {
+    const [openCard, setOpenCard] = useState(false);
 
     return (
         <div className="wallpaper">
@@ -13,10 +16,14 @@ export function LandingPage() {
                     <DesktopIcon
                     key={section.id}
                     label={section.label}
-                    onClick={() => alert(`${section.label} clicked`)}
+                    onClick={() => setOpenCard(true)}
                     />
                 ))}
             </div>
+
+            {openCard && (
+                <Card onClose={() => setOpenCard(false)} />
+            )}
         </div>
     );
 }
