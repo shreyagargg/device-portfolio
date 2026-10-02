@@ -1,10 +1,15 @@
 import React from "react";
+import { FolderIcon } from "./FolderIcon";
 
-export function Tile({tileName}){
-    return(
-        <div className="tile">
-            <img src="" alt="alts" />
-            <p>{tileName}</p>
-        </div>
-    )
+export function Tile({tileName, active, onClick}) {
+  return (
+    <button
+      className={`tile ${active ? "active" : ""}`}
+      onClick={onClick}
+    >
+      <FolderIcon />
+
+      <span>{tileName}</span>
+    </button>
+  );
 }

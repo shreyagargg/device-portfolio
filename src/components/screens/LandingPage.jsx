@@ -4,9 +4,10 @@ import "../style.css";
 import { PORTFOLIO_SECTIONS } from "../../constants/navigation"
 import { DesktopIcon } from "../component/Folder";
 import { Card } from "../component/Card";
+import { TaskBar } from "../component/TaskBar";
 
 export function LandingPage() {
-    const [openCard, setOpenCard] = useState(false);
+    const [openCard, setOpenCard] = useState(null);
 
     return (
         <div className="wallpaper">
@@ -16,14 +17,18 @@ export function LandingPage() {
                     <DesktopIcon
                     key={section.id}
                     label={section.label}
-                    onClick={() => setOpenCard(true)}
+                    onClick={() => setOpenCard(section)}
                     />
                 ))}
             </div>
 
             {openCard && (
-                <Card onClose={() => setOpenCard(false)} />
+                <Card 
+                section = {openCard}
+                onClose={() => setOpenCard(false)} />
             )}
+
+            <TaskBar />
         </div>
     );
 }
