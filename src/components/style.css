@@ -129,27 +129,20 @@
     position: absolute;
 
     top: 100px;
-    left: 300px;
+    left: 150px;
 
-    width: 700px;
+    width: 900px;
     height: 450px;
-
-    min-width: 350px;
-    min-height: 250px;
-
+    min-width: 900px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
 
     background: white;
-
     border-radius: 8px;
-
     overflow: hidden;
-
     resize: both;
-
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-
     z-index: 100;
 }
 
@@ -249,21 +242,34 @@
 ========================================================= */
 
 .leftSide {
-    width: 30%;
-
     height: 100%;
-
     padding: 12px;
-
     flex-shrink: 0;
-
     overflow-y: auto;
-
     background: #f2f2f2;
-
-    border-right: 1px solid #d6d6d6;
 }
 
+
+.sidebar-resizer {
+    width: 5px;
+    flex-shrink: 0;
+    background: #d6d6d6;
+    cursor: col-resize;
+    transition: background 0.15s ease;
+}
+
+.sidebar-resizer:hover {
+    background: #999;
+}
+
+.rightSide {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    background: white;
+}
 
 /* =========================================================
    SIDEBAR TILE
@@ -331,26 +337,6 @@
 
     color: #222;
 }
-
-
-/* =========================================================
-   RIGHT CONTENT
-========================================================= */
-
-.rightSide {
-    width: 70%;
-
-    height: 100%;
-
-    min-width: 0;
-
-    padding: 20px;
-
-    overflow-y: auto;
-
-    background: white;
-}
-
 
 /* =========================================================
    SCROLLBAR
@@ -439,8 +425,65 @@
 
 .taskbar-date-time p {
     margin: 0;
-
     font-size: 12px;
-
     color: whitesmoke;
+}
+
+.lower-line{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.edu-card {
+  background-color: rgba(194, 57, 215, 0.308);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+
+  min-height: 120px;
+  width: 150px;
+  padding: 8px;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.edu-card:hover {
+  transform: translateY(-4px); /* Moves card up slightly */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+}
+
+.edu-cards {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.education{
+    background-color: whitesmoke;
+    width: fit-content;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.about-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c239d7;
+  flex-shrink: 0; /* Prevents image from shrinking when text grows */
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import desktop from "../../assets/desktopWallpaper.png";
+import desktop from "./../../assets/profile-pht.png";
 import "../style.css";
 import { PORTFOLIO_SECTIONS } from "../../constants/navigation"
 import { DesktopIcon } from "../component/Folder";
