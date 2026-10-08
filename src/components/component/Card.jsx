@@ -1,107 +1,240 @@
 import React, { useRef, useState } from "react";
-import { TitleBar } from "./TitleBar";
 import Draggable from "react-draggable";
+import { TitleBar } from "./TitleBar";
+import { SidebarTree } from "./SidebarTree";
 import { PORTFOLIO_SECTIONS } from "../../constants/navigation";
-import { Tile } from "./Tile";
 import "../style.css";
-import { AboutScreen } from "../screens/Aboutscreen";
-import profile from "../../assets/profile-pht.png"; // Ensure filename matches exactly
-
+import {AboutScreen} from "../screens/AboutScreen"
+import { SessionInfo } from "./SessionInfo";
 
 export function Card({ section, onClose }) {
   const nodeRef = useRef(null);
 
-  const [activeSection, setActiveSection] = useState(section);
   const [sidebarWidth, setSidebarWidth] = useState(30);
+  const [currentFile, setCurrentFile] = useState(null);
+  const [filePath, setFilePath] = useState([]);
+
+  // --------------------------------
+  // OPEN FILE
+  // --------------------------------
+
+  const handleFileOpen = (file, path) => {
+    setCurrentFile(file);
+    setFilePath(path);
+  };
+
+  // --------------------------------
+  // BACK
+  // --------------------------------
+
+  const goBack = () => {
+    setCurrentFile(null);
+    setFilePath([]);
+  };
+
+  const handleSidebarResize = (e) => {
+    e.preventDefault();
+
+    const card = e.currentTarget.parentElement;
+    const leftSide = card.querySelector(".leftSide");
+    const startX = e.clientX;
+    const startWidth = leftSide.offsetWidth;
+
+    const handleMouseMove = (event) => {
+      const newWidth = startWidth + (event.clientX - startX);
+      const percentage = (newWidth / card.offsetWidth) * 100;
+
+      setSidebarWidth(Math.min(60, Math.max(20, percentage)));
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+
+  // --------------------------------
+  // FILE CONTENT
+  // --------------------------------
+
+  const renderFileContent = () => {
+    if (!currentFile) return null;
+
+    switch (currentFile.id) {
+      case "introduction":
+        return (
+          < AboutScreen />
+        );
+
+      case "session":
+        return (
+          < SessionInfo />
+        );
+
+    
+      case "coursework":
+        return (
+          <div className="file-content">
+            <h1>Coursework</h1>
+
+            <p>
+              Data Structures, DBMS, Operating Systems, Computer Networks,
+              Software Engineering and Web Development.
+            </p>
+          </div>
+        );
+
+      case "teaching":
+        return (
+          <div className="file-content">
+            <h1>Teaching Experience</h1>
+
+            <p>
+              Teaching Computer Science to Classes 6–8, covering programming
+              concepts, databases, MS Office and basic web technologies.
+            </p>
+          </div>
+        );
+
+      case "react":
+        return (
+          <div className="file-content">
+            <h1>React</h1>
+
+            <p>Building reusable and responsive interfaces using React.js.</p>
+          </div>
+        );
+
+      case "javascript":
+        return (
+          <div className="file-content">
+            <h1>JavaScript</h1>
+
+            <p>
+              Working with modern JavaScript, state management, APIs and DOM
+              concepts.
+            </p>
+          </div>
+        );
+
+      default:
+        return (
+          <div className="file-content">
+            <h1>{currentFile.label}</h1>
+
+            <p>Content for this file will appear here.</p>
+          </div>
+        );
+    }
+  };
+
+  // --------------------------------
+  // BREADCRUMB
+  // --------------------------------
+
+  const renderBreadcrumb = () => {
+    return (
+      <div className="breadcrumb">
+        <button
+          className="back-button"
+          onClick={goBack}
+          disabled={!currentFile}
+        >
+          ←
+        </button>
+
+        <span>Home</span>
+
+        {filePath.map((item, index) => (
+          <React.Fragment key={`${item.id}-${index}`}>
+            <span>›</span>
+
+            <span>{item.label}</span>
+          </React.Fragment>
+        ))}
+
+        {currentFile && (
+          <>
+            <span>›</span>
+
+            <strong>{currentFile.label}</strong>
+          </>
+        )}
+      </div>
+    );
+  };
+
+  // --------------------------------
+  // UI
+  // --------------------------------
 
   return (
     <Draggable nodeRef={nodeRef} handle=".title-bar" bounds="parent">
       <div ref={nodeRef} className="card">
-        <TitleBar title={activeSection.title} onClose={onClose} />
+        {/* =========================
+            TITLE BAR
+        ========================== */}
+
+        <TitleBar
+          title={currentFile ? currentFile.label : section.label}
+          onClose={onClose}
+        />
 
         <div className="content">
-          {/* LEFT SIDEBAR */}
-          <div className="leftSide" style={{ width: "$(sidebarWidth)%" }}>
-            {PORTFOLIO_SECTIONS.map((item) => (
-              <Tile
-                key={item.id}
-                tileName={item.label}
-                active={activeSection.id === item.id}
-                onClick={() => setActiveSection(item)}
-              />
-            ))}
+          {/* =========================
+              LEFT SIDEBAR
+          ========================== */}
+
+          <div
+            className="leftSide"
+            style={{
+              width: `${sidebarWidth}%`,
+            }}
+          >
+            <SidebarTree
+              items={PORTFOLIO_SECTIONS}
+              activeFile={currentFile}
+              onFileOpen={handleFileOpen}
+            />
           </div>
 
-            <div
-        className="sidebar-resizer"
-        onMouseDown={(e) => {
-            e.preventDefault();
+          {/* =========================
+              SIDEBAR RESIZER
+          ========================== */}
 
-            const card = e.currentTarget.parentElement;
-            const startX = e.clientX;
-            const startWidth = card.querySelector(".leftSide").offsetWidth;
+          <div className="sidebar-resizer" onMouseDown={handleSidebarResize} />
 
-            const handleMouseMove = (event) => {
-                const newWidth =
-                    startWidth + (event.clientX - startX);
+          {/* =========================
+              RIGHT SIDE
+          ========================== */}
 
-                const percentage =
-                    (newWidth / card.offsetWidth) * 100;
-
-                setSidebarWidth(
-                    Math.min(60, Math.max(20, percentage))
-                );
-            };
-
-            const handleMouseUp = () => {
-                document.removeEventListener(
-                    "mousemove",
-                    handleMouseMove
-                );
-
-                document.removeEventListener(
-                    "mouseup",
-                    handleMouseUp
-                );
-            };
-
-            document.addEventListener(
-                "mousemove",
-                handleMouseMove
-            );
-
-            document.addEventListener(
-                "mouseup",
-                handleMouseUp
-            );
-        }}
-    />
-
-          {/* RIGHT CONTENT */}
           <div className="rightSide">
-            {activeSection.id === "about" && (
-              <AboutScreen />
-              // <div>
-              //   <h1>About Me</h1>
-              //   <p>Your about section content goes here.</p>
-              // </div>
-            )}
+            {/* BREADCRUMB */}
 
-            {activeSection.id === "projects" && (
-              <div>
-       <img className="profile-avatar" src={profile} alt="Shreya Garg" />
- 
-              </div>
-            )}
+            {renderBreadcrumb()}
 
-            {activeSection.id === "skills" && (
-              <div>
-                <h1>Skills</h1>
-                <p>Your skills will appear here.</p>
+            {/* =========================
+                FILE OPEN
+            ========================== */}
+
+            {currentFile ? (
+              <div className="file-view">{renderFileContent()}</div>
+            ) : (
+              <div className="empty-folder">
+                <div className="empty-folder-icon">📁</div>
+
+                <p>Select a file from the sidebar to view its contents.</p>
               </div>
             )}
           </div>
         </div>
+
+        {/* =========================
+            WINDOW RESIZE
+        ========================== */}
 
         <div className="resize-handle" />
       </div>
