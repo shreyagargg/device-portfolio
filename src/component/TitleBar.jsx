@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css";
+import "./style.css";
 import { Minimize2, Maximize2, X} from "lucide-react";
 
 export function TitleBar({ title, onClose }) {

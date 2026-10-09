@@ -36,41 +36,41 @@ export const PORTFOLIO_SECTIONS = [
         id: "syai",
         label: "SyAi",
         type: "folder",
-        children: [
-          {
-            id: "syai-overview",
-            label: "Overview",
-            type: "file",
-          },
-          {
-            id: "syai-features",
-            label: "Features",
-            type: "file",
-          },
-          {
-            id: "syai-tech",
-            label: "Tech Stack",
-            type: "file",
-          },
-        ],
+        // children: [
+        //   {
+        //     id: "syai-overview",
+        //     label: "Overview",
+        //     type: "file",
+        //   },
+        //   {
+        //     id: "syai-features",
+        //     label: "Features",
+        //     type: "file",
+        //   },
+        //   {
+        //     id: "syai-tech",
+        //     label: "Tech Stack",
+        //     type: "file",
+        //   },
+        // ],
       },
 
       {
         id: "finance",
         label: "Finance Backend",
         type: "folder",
-        children: [
-          {
-            id: "finance-overview",
-            label: "Overview",
-            type: "file",
-          },
-          {
-            id: "finance-tech",
-            label: "Tech Stack",
-            type: "file",
-          },
-        ],
+        // children: [
+        //   {
+        //     id: "finance-overview",
+        //     label: "Overview",
+        //     type: "file",
+        //   },
+        //   {
+        //     id: "finance-tech",
+        //     label: "Tech Stack",
+        //     type: "file",
+        //   },
+        // ],
       },
     ],
   },
@@ -79,27 +79,27 @@ export const PORTFOLIO_SECTIONS = [
     id: "skills",
     label: "Skills",
     type: "folder",
-    children: [
-      {
-        id: "frontend",
-        label: "Frontend",
-        type: "folder",
-        children: [
-          { id: "react", label: "React", type: "file" },
-          { id: "javascript", label: "JavaScript", type: "file" },
-          { id: "html-css", label: "HTML & CSS", type: "file" },
-        ],
-      },
-      {
-        id: "backend",
-        label: "Backend",
-        type: "folder",
-        children: [
-          { id: "node", label: "Node.js", type: "file" },
-          { id: "spring", label: "Spring Boot", type: "file" },
-        ],
-      },
-    ],
+    // children: [
+    //   {
+    //     id: "frontend",
+    //     label: "Frontend",
+    //     type: "folder",
+    //     children: [
+    //       { id: "react", label: "React", type: "file" },
+    //       { id: "javascript", label: "JavaScript", type: "file" },
+    //       { id: "html-css", label: "HTML & CSS", type: "file" },
+    //     ],
+    //   },
+    //   {
+    //     id: "backend",
+    //     label: "Backend",
+    //     type: "folder",
+    //     children: [
+    //       { id: "node", label: "Node.js", type: "file" },
+    //       { id: "spring", label: "Spring Boot", type: "file" },
+    //     ],
+    //   },
+    // ],
   },
 
   {
@@ -118,11 +118,11 @@ export const PORTFOLIO_SECTIONS = [
   {
     id: "contact",
     label: "Contact",
-    type: "folder",
-    children: [
-      { id: "email", label: "Email", type: "file" },
-      { id: "github", label: "GitHub", type: "file" },
-      { id: "linkedin", label: "LinkedIn", type: "file" },
-    ],
+    type: "file",
+    // children: [
+    //   { id: "email", label: "Email", type: "file" },
+    //   { id: "github", label: "GitHub", type: "file" },
+    //   { id: "linkedin", label: "LinkedIn", type: "file" },
+    // ],
   },
 ];

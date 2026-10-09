@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import { TitleBar } from "./TitleBar";
 import { SidebarTree } from "./SidebarTree";
 
-import { PORTFOLIO_SECTIONS } from "../../config/navigation";
+import { PORTFOLIO_SECTIONS } from "../constants/navigation";
 import { FILE_REGISTRY } from "../config/FileRegistry";
 import { findFirstFile } from "./NavigationUtils";
 

@@ -33,11 +33,6 @@ export function SidebarTree({
   );
 }
 
-
-// =================================
-// TREE ITEM
-// =================================
-
 function TreeItem({
   item,
   level,
@@ -57,10 +52,6 @@ function TreeItem({
   const isActive =
     activeFile?.id === item.id;
 
-  // --------------------------------
-  // CLICK
-  // --------------------------------
-
   const handleClick = () => {
 
     // FOLDER
@@ -76,10 +67,6 @@ function TreeItem({
   return (
     <div className="tree-node">
 
-      {/* =========================
-          ITEM
-      ========================== */}
-
       <div
         className={`tree-item ${
           isActive
@@ -93,8 +80,6 @@ function TreeItem({
         onClick={handleClick}
       >
 
-        {/* ARROW */}
-
         <span className="tree-arrow">
 
           {isFolder && hasChildren
@@ -105,8 +90,6 @@ function TreeItem({
           }
 
         </span>
-
-        {/* ICON */}
 
         <span className="tree-icon">
 
@@ -119,17 +102,11 @@ function TreeItem({
 
         </span>
 
-        {/* NAME */}
-
         <span className="tree-label">
           {item.label}
         </span>
 
       </div>
-
-      {/* =========================
-          CHILDREN
-      ========================== */}
 
       {isFolder &&
         isOpen &&

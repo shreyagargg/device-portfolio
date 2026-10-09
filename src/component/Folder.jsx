@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Draggable from "react-draggable";
 import { FolderIcon } from "./FolderIcon";
+import "./style.css"
 
 export function DesktopIcon({ label, onClick }) {
 
