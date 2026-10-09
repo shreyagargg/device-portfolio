@@ -1,0 +1,14 @@
+:root {
+  --accent-purple: #c239d7;
+  --accent-gold: #ffd54f;
+  --bg-dark: #202020;
+  --bg-light: #whitesmoke;
+  --text-dark: #1a202c;
+  --text-muted: #4a5568;
+  --text-light: #whitesmoke;
+  --border-light: rgba(255, 255, 255, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

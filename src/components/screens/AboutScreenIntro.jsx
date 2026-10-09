@@ -1,13 +1,13 @@
 import React from "react";
-import { AboutCard } from "../component/AboutCard";
-import { EducationCard } from "../component/EducationCard";
-import { SessionInfo } from "../component/SessionInfo";
+import { AboutCard } from "../../features/about/AboutCard";
+import { EducationCard } from "../../features/about/EducationCard";
+import { SessionInfo } from "../../features/about/SessionInfo";
 
 export function AboutScreen() {
   return (
     <div className="about-screen">
       <AboutCard />
-      <div className="education">
+      {/* <div className="education">
         <h1>Education</h1>
         <div className="edu-cards">
           <EducationCard
@@ -26,7 +26,7 @@ export function AboutScreen() {
             year={"2022-2026"}
           />
         </div>
-      </div>
+      </div> */}
       <SessionInfo />
     </div>
   );

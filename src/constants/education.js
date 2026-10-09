@@ -7,14 +7,14 @@ export const education = [
         marks: '89%',
     },
         {
-        id: 'ed1',
+        id: 'ed2',
         degree: 'Class 12th',
         institution: 'Maharaja Agarsain Public School',
         year: '2020-2021',
         marks: '89%',
     },
         {
-        id: 'ed1',
+        id: 'ed3',
         degree: 'B Tech',
         institution: 'SRM Unversity',
         year: '2022-2026',

@@ -1,26 +1,4 @@
-/* =========================================================
-   ROOT VARIABLES & RESET
-========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
-
-:root {
-  --accent-purple: #c239d7;
-  --accent-gold: #ffd54f;
-  --bg-dark: #202020;
-  --bg-light: #whitesmoke;
-  --text-dark: #1a202c;
-  --text-muted: #4a5568;
-  --text-light: #whitesmoke;
-  --border-light: rgba(255, 255, 255, 0.1);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   WALLPAPER / DESKTOP
-========================================================= */
 
 .wallpaper {
   position: relative;
@@ -683,4 +661,82 @@
 
 .prompt-text {
   color: #38bdf8;
+}
+
+.timeline {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* Center line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #555;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #7c3aed;
+  z-index: 2;
+}
+
+.left .timeline-dot {
+  right: -7px;
+}
+
+.right .timeline-dot {
+  left: -7px;
+}
+
+/* Card */
+.timeline-card {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #7c3aed;
+}
+
+.timeline-card h3 {
+  margin: 8px 0;
+}
+
+.timeline-card p {
+  margin: 0;
+  color: #666;
 }
