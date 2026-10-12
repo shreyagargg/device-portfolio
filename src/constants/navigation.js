@@ -15,8 +15,8 @@ export const PORTFOLIO_SECTIONS = [
         type: "file",
       },
       {
-        id: "interests",
-        label: "Interests",
+        id: "timeline",
+        label: "Timeline",
         type: "file",
       },
       {
@@ -55,14 +55,14 @@ export const PORTFOLIO_SECTIONS = [
   {
     id: "experience",
     label: "Experience",
-    type: "folder",
-    children: [
-      {
-        id: "teaching",
-        label: "Teaching",
-        type: "file",
-      },
-    ],
+    type: "file",
+    // children: [
+    //   {
+    //     id: "teaching",
+    //     label: "Teaching",
+    //     type: "file",
+    //   },
+    // ],
   },
 
   {

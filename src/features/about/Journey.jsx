@@ -23,14 +23,8 @@ export function Journey() {
             opacity: 0,
             x: index % 2 === 0 ? -50 : 50,
           }}
-          animate={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 1.3 + index * 0.45,
-          }}
+          animate={{opacity: 1,x: 0,}}
+          transition={{duration: 0.6,delay: 1.3 + index * 0.45,}}
         >
           <motion.div
             className="timeline-dot"

@@ -163,37 +163,6 @@ export function SkillsCard() {
                   <ExternalLink size={14} />
                 </a>
               </div>
-
-              <div className="skill-proficiency">
-                <div className="proficiency-labels">
-                  <span>Proficiency</span>
-                  <span className="proficiency-value">
-                    {skill.proficiency}%
-                  </span>
-                </div>
-
-                <div
-                  className="proficiency-track"
-                  role="progressbar"
-                  aria-label={`${skill.name} proficiency`}
-                  aria-valuenow={Math.min(
-                    100,
-                    Math.max(0, skill.proficiency)
-                  )}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                >
-                  <div
-                    className="proficiency-fill"
-                    style={{
-                      width: `${Math.min(
-                        100,
-                        Math.max(0, skill.proficiency)
-                      )}%`,
-                    }}
-                  />
-                </div>
-              </div>
             </article>
           ))
         ) : (
