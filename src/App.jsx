@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LandingPage } from "./LandingPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/device-portfolio">
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
