@@ -1,0 +1,122 @@
+export const skillsData = [
+  {
+    id: 'cpp',
+    name: 'C++',
+    category: 'Languages',
+    level: 'Advanced',
+    proficiency: 90,
+    docUrl: 'https://isocpp.org',
+    iconText: 'C++',
+    bgColor: '#818cf8',
+    textColor: '#ffffff',
+    description: 'Object-Oriented Programming, Data Structures & Algorithms'
+  },
+  {
+    id: 'js',
+    name: 'JavaScript (ES6+)',
+    category: 'Languages',
+    level: 'Advanced',
+    proficiency: 88,
+    docUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    iconText: 'JS',
+    bgColor: '#facc15',
+    textColor: '#1e293b',
+    description: 'Asynchronous JS, Closures, DOM Manipulation & Modern Syntaxes'
+  },
+  {
+    id: 'python',
+    name: 'Python',
+    category: 'Languages',
+    level: 'Intermediate',
+    proficiency: 78,
+    docUrl: 'https://www.python.org',
+    iconText: 'Py',
+    bgColor: '#38bdf8',
+    textColor: '#0f172a',
+    description: 'Scripting, Automation & Basic Machine Learning Libraries'
+  },
+  {
+    id: 'react',
+    name: 'React.js',
+    category: 'Frontend',
+    level: 'Advanced',
+    proficiency: 85,
+    docUrl: 'https://react.dev',
+    iconText: 'React',
+    bgColor: '#06b6d4',
+    textColor: '#ffffff',
+    description: 'Hooks, Context API, Redux Toolkit & State Management'
+  },
+  {
+    id: 'htmlcss',
+    name: 'HTML5 & CSS3',
+    category: 'Frontend',
+    level: 'Advanced',
+    proficiency: 92,
+    docUrl: 'https://developer.mozilla.org',
+    iconText: 'HTML',
+    bgColor: '#f97316',
+    textColor: '#ffffff',
+    description: 'Semantic Markup, Flexbox, Grid & Responsive Layouts'
+  },
+  {
+    id: 'tailwind',
+    name: 'Tailwind CSS',
+    category: 'Frontend',
+    level: 'Advanced',
+    proficiency: 90,
+    docUrl: 'https://tailwindcss.com',
+    iconText: 'TW',
+    bgColor: '#38bdf8',
+    textColor: '#0f172a',
+    description: 'Utility-first CSS, Custom Configuration & Dark Mode Styling'
+  },
+  {
+    id: 'node',
+    name: 'Node.js & Express',
+    category: 'Backend',
+    level: 'Intermediate',
+    proficiency: 75,
+    docUrl: 'https://nodejs.org',
+    iconText: 'Node',
+    bgColor: '#4ade80',
+    textColor: '#0f172a',
+    description: 'RESTful APIs, Middleware, JWT Auth & Server Architecture'
+  },
+  {
+    id: 'sql',
+    name: 'SQL & PostgreSQL',
+    category: 'Backend',
+    level: 'Intermediate',
+    proficiency: 72,
+    docUrl: 'https://www.postgresql.org',
+    iconText: 'SQL',
+    bgColor: '#60a5fa',
+    textColor: '#ffffff',
+    description: 'Relational Database Design, Joins & Query Optimization'
+  },
+  {
+    id: 'git',
+    name: 'Git & GitHub',
+    category: 'Tools & OS',
+    level: 'Advanced',
+    proficiency: 88,
+    docUrl: 'https://git-scm.com',
+    iconText: 'Git',
+    bgColor: '#f43f5e',
+    textColor: '#ffffff',
+    description: 'Version Control, Branching Workflows, PR Reviews & Actions'
+  },
+  {
+    id: 'vscode',
+    name: 'VS Code & Tools',
+    category: 'Tools & OS',
+    level: 'Advanced',
+    proficiency: 95,
+    docUrl: 'https://code.visualstudio.com',
+    iconText: 'VSC',
+    bgColor: '#a78bfa',
+    textColor: '#ffffff',
+    description: 'Debugging, Extension Ecosystem & Command Line CLI'
+  }
+];

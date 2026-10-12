@@ -1,0 +1,482 @@
+
+/* Main Container */
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  color: #1e293b;
+}
+
+/* Header */
+.skills-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skills-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skills-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 2px solid #581c87;
+  border-radius: 16px;
+  background: #f3e8ff;
+  color: #581c87;
+  transform: rotate(-6deg);
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.skills-heading h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+.skills-subtitle {
+  max-width: 420px;
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.skills-doodle {
+  display: none;
+}
+
+/* LeetCode Spotlight */
+.leetcode-spotlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #c084fc4d;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #581c87, #312e81);
+  color: white;
+  box-shadow: 0 2px 5px #0000000d;
+}
+
+.leetcode-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.leetcode-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid #fbbf2466;
+  border-radius: 16px;
+  background: #f59e0b33;
+  color: #fcd34d;
+}
+
+.leetcode-info {
+  min-width: 0;
+}
+
+.leetcode-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.leetcode-heading h3 {
+  margin: 0;
+  color: #f3e8ff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.leetcode-badge {
+  padding: 3px 8px;
+  border: 1px solid #fbbf244d;
+  border-radius: 999px;
+  background: #fbbf2433;
+  color: #fcd34d;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.leetcode-info p {
+  margin: 6px 0 0;
+  color: #e9d5ffcc;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.leetcode-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 9px 14px;
+  border: 1px solid #ffffff33;
+  border-radius: 12px;
+  background: #ffffff1a;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.leetcode-link:hover {
+  background: #ffffff33;
+  transform: scale(1.03);
+}
+
+/* Search and Category Filters */
+.skills-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.category-button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #eeeef9;
+  color: #581c87b3;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.category-button:hover {
+  background: #e9d5ff99;
+  color: #3b0764;
+}
+
+.category-button.active {
+  background: #581c87;
+  color: #ffffff;
+  box-shadow: 0 2px 4px #00000012;
+}
+
+.skills-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+}
+
+.skills-search svg {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.skills-search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 8px 12px 8px 32px;
+  border: 1px solid #ddd6fe;
+  border-radius: 12px;
+  outline: none;
+  background: #eeeef9;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-search input::placeholder {
+  color: #94a3b8;
+}
+
+.skills-search input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px #a78bfa33;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #ddd6feB3;
+  border-radius: 16px;
+  background: #eeeef9e6;
+  box-shadow: 0 1px 3px #0000000d;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+  border-color: #c4b5fd;
+  background: #e6e5f5;
+  box-shadow: 0 4px 10px #581c870d;
+}
+
+.skill-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.skill-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px #0000000d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.skill-text {
+  min-width: 0;
+}
+
+.skill-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-title-row h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.skill-level {
+  padding: 3px 8px;
+  border: 1px solid #d8b4fe66;
+  border-radius: 6px;
+  background: #e9d5ff99;
+  color: #581c87;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.skill-text p {
+  display: -webkit-box;
+  margin: 4px 0 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.skill-doc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 7px;
+  border-radius: 8px;
+  color: #6b21a8;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.skill-doc-link:hover {
+  background: #e9d5ff99;
+}
+
+/* Proficiency */
+.skill-proficiency {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proficiency-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.proficiency-value {
+  color: #581c87;
+  font-weight: 800;
+}
+
+.proficiency-track {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ddd6fe99;
+}
+
+.proficiency-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9333ea, #4f46e5);
+  transition: width 0.5s ease;
+}
+
+/* Empty Search Results */
+.skills-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 32px 12px;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Layout */
+@media (min-width: 640px) {
+  .skills-header {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .skills-doodle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 8px;
+    color: #581c87;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .skills-doodle span {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    transform: rotate(2deg);
+  }
+
+  .skills-doodle svg {
+    width: 56px;
+    height: 32px;
+    margin-top: 4px;
+    transform: rotate(-12deg);
+  }
+
+  .leetcode-spotlight {
+    flex-direction: row;
+  }
+
+  .skills-toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading h1 {
+    font-size: 26px;
+  }
+
+  .leetcode-spotlight {
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .leetcode-content {
+    gap: 10px;
+  }
+
+  .leetcode-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .leetcode-heading {
+    gap: 6px;
+  }
+
+  .leetcode-heading h3 {
+    font-size: 13px;
+  }
+
+  .leetcode-link {
+    align-self: flex-start;
+  }
+
+  .skills-search {
+    width: 100%;
+  }
+}
