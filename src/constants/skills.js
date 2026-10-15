@@ -1,12 +1,12 @@
 export const skillsData = [
   {
-    id: 'cpp',
-    name: 'C++',
+    id: 'java',
+    name: 'Java',
     category: 'Languages',
     level: 'Advanced',
     proficiency: 90,
     docUrl: 'https://isocpp.org',
-    iconText: 'C++',
+    iconText: 'J',
     bgColor: '#818cf8',
     textColor: '#ffffff',
     description: 'Object-Oriented Programming, Data Structures & Algorithms'
@@ -34,6 +34,18 @@ export const skillsData = [
     bgColor: '#38bdf8',
     textColor: '#0f172a',
     description: 'Scripting, Automation & Basic Machine Learning Libraries'
+  },
+    {
+    id: 'kotlin',
+    name: 'Kotlin',
+    category: 'Languages',
+    level: 'Beginner',
+    proficiency: 95,
+    docUrl: 'https://code.visualstudio.com',
+    iconText: 'k',
+    bgColor: '#a78bfa',
+    textColor: '#ffffff',
+    description: 'Debugging, Extension Ecosystem & Command Line CLI'
   },
   {
     id: 'react',
@@ -63,7 +75,7 @@ export const skillsData = [
     id: 'tailwind',
     name: 'Tailwind CSS',
     category: 'Frontend',
-    level: 'Advanced',
+    level: 'Beginner',
     proficiency: 90,
     docUrl: 'https://tailwindcss.com',
     iconText: 'TW',
@@ -86,7 +98,7 @@ export const skillsData = [
   {
     id: 'sql',
     name: 'SQL & PostgreSQL',
-    category: 'Backend',
+    category: 'Database',
     level: 'Intermediate',
     proficiency: 72,
     docUrl: 'https://www.postgresql.org',
@@ -107,10 +119,34 @@ export const skillsData = [
     textColor: '#ffffff',
     description: 'Version Control, Branching Workflows, PR Reviews & Actions'
   },
+    {
+    id: 'android',
+    name: 'Android Studio',
+    category: 'Tools',
+    level: 'Advanced',
+    proficiency: 88,
+    docUrl: 'https://git-scm.com',
+    iconText: 'Git',
+    bgColor: '#f43f5e',
+    textColor: '#ffffff',
+    description: 'Version Control, Branching Workflows, PR Reviews & Actions'
+  },
+    {
+    id: 'figma',
+    name: 'Figma',
+    category: 'Tools',
+    level: 'Beginner',
+    proficiency: 88,
+    docUrl: 'https://git-scm.com',
+    iconText: 'Git',
+    bgColor: '#f43f5e',
+    textColor: '#ffffff',
+    description: 'Version Control, Branching Workflows, PR Reviews & Actions'
+  },
   {
     id: 'vscode',
     name: 'VS Code & Tools',
-    category: 'Tools & OS',
+    category: 'Tools',
     level: 'Advanced',
     proficiency: 95,
     docUrl: 'https://code.visualstudio.com',

@@ -1,13 +1,13 @@
 export const experienceData = [
   {
     id: 'exp1',
-    role: 'Software Engineer Intern',
-    company: 'TechCorp Solutions',
+    role: 'Web Development Intern',
+    company: 'Soouls Pvt. Lmtd.',
     type: 'Internship',
-    location: 'Remote / Delhi, India',
-    period: 'Jan 2024 – Present',
-    duration: '8 mos',
-    isCurrent: true,
+    location: 'Remote',
+    period: 'Oct, 2025 - Mar, 2026',
+    duration: '6 mos',
+    isCurrent: false,
     accentColor: '#8b5cf6',
     bgColor: '#f3e8ff',
     borderColor: '#d8b4fe',
@@ -22,16 +22,16 @@ export const experienceData = [
       'Optimized client-side state bundle size by 28% through code splitting, lazy loading, and custom memoization.',
       'Collaborated in an Agile team of 8 engineers, conducting code reviews and implementing CI/CD GitHub Action workflows.'
     ],
-    techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Redux Toolkit', 'Jest', 'Git']
+    techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'Tanstack', 'VS Code', 'Git']
   },
   {
     id: 'exp2',
-    role: 'Full Stack Developer Intern',
-    company: 'WebSolutions Studio',
-    type: 'Internship',
+    role: 'TGT Computer',
+    company: 'RK International School',
+    type: 'Fulltime',
     location: 'Delhi, India',
-    period: 'May 2023 – Dec 2023',
-    duration: '8 mos',
+    period: 'April, 2026 – Sep, 2026',
+    duration: '6 mos',
     isCurrent: false,
     accentColor: '#3b82f6',
     bgColor: '#dbeafe',
@@ -47,13 +47,13 @@ export const experienceData = [
       'Built custom reusable UI component libraries with Tailwind CSS matching strict client design specifications.',
       'Integrated payment gateways (Stripe, Razorpay) and webhook handlers for e-commerce client builds.'
     ],
-    techStack: ['React', 'JavaScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Tailwind CSS', 'Docker']
+    techStack: ['MS Excel', 'HTML', 'Python', 'MS Access', 'Communication']
   },
   {
     id: 'exp3',
-    role: 'Open Source & Freelance Developer',
-    company: 'Self-Employed / Community',
-    type: 'Contributions',
+    role: 'Android Developer',
+    company: 'Eatloop',
+    type: 'Internship',
     location: 'Remote',
     period: 'Jun 2022 – Apr 2023',
     duration: '11 mos',

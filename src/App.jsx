@@ -1,15 +1,14 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { LandingPage } from "./LandingPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { LandingPage } from './LandingPage'
 
 function App() {
   return (
-    <Router basename="/device-portfolio">
+    <BrowserRouter basename="/device-portfolio">
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
-    </Router>
-  );
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

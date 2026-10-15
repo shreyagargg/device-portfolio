@@ -56,13 +56,6 @@ export const PORTFOLIO_SECTIONS = [
     id: "experience",
     label: "Experience",
     type: "file",
-    // children: [
-    //   {
-    //     id: "teaching",
-    //     label: "Teaching",
-    //     type: "file",
-    //   },
-    // ],
   },
 
   {

@@ -1,26 +1,11 @@
 import React, { useState } from "react";
-import {
-  Mail,
-  ExternalLink,
-  AArrowUpIcon,
-  Code2,
-  Globe,
-  PackageIcon,
-  MapPin,
-  Copy,
-  Check,
-  Send,
-  ArrowUpRight,
-  PowerIcon,
-  Wand2,
-} from "lucide-react";
+import { Mail, ExternalLink, Copy, Check, Send} from "lucide-react";
 import "./ContactPage.css";
+import { contactDetails } from "./../../constants/contact"
 
 export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const userEmail = "your.email@example.com"; // Replace with your email address
-  const [activeTab, setActiveTab] = useState("contact");
   const [copiedId, setCopiedId] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -44,8 +29,6 @@ export function ContactPage() {
     }
   };
 
-  const handleCopyEmail = () => handleCopy("email", userEmail);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -63,111 +46,6 @@ export function ContactPage() {
       }, 4000);
     }, 1000);
   };
-
-  const contactDetails = [
-    {
-      id: "email",
-      label: "Email",
-      value: "shreya.garg@example.com",
-      type: "copy",
-      icon: Mail,
-      bgColor: "#a78bfa",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "phone",
-      label: "Phone",
-      value: "+91 98765 43210",
-      type: "copy",
-      icon: Wand2,
-      bgColor: "#e879f9",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "location",
-      label: "Location",
-      value: "Delhi, India",
-      type: "copy",
-      icon: MapPin,
-      bgColor: "#818cf8",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "linkedin",
-      label: "LinkedIn",
-      value: "linkedin.com/in/shreya-garg",
-      url: "https://linkedin.com/in/shreya-garg",
-      type: "link",
-      icon: ArrowUpRight,
-      bgColor: "#3b82f6",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "github",
-      label: "GitHub",
-      value: "github.com/shreya-garg",
-      url: "https://github.com/shreya-garg",
-      type: "link",
-      icon: PowerIcon,
-      bgColor: "#1e293b",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "leetcode",
-      label: "LeetCode",
-      value: "leetcode.com/shreya-garg",
-      url: "https://leetcode.com/shreya-garg",
-      type: "link",
-      icon: Code2,
-      bgColor: "#f97316",
-      iconColor: "#ffffff",
-    },
-    {
-      id: "portfolio",
-      label: "Portfolio",
-      value: "shreyagarg.dev",
-      url: "https://shreyagarg.dev",
-      type: "link",
-      icon: Globe,
-      bgColor: "#06b6d4",
-      iconColor: "#ffffff",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      id: "github",
-      label: "GitHub",
-      username: "@yourusername",
-      url: "https://github.com/yourusername",
-      icon: <PackageIcon size={20} />,
-      color: "#2ea44f",
-    },
-    {
-      id: "leetcode",
-      label: "LeetCode",
-      username: "@yourusername",
-      url: "https://leetcode.com/yourusername",
-      icon: <Code2 size={20} />,
-      color: "#f89b1c",
-    },
-    {
-      id: "portfolio",
-      label: "Portfolio",
-      username: "yourportfolio.dev",
-      url: "https://yourportfolio.dev",
-      icon: <Globe size={20} />,
-      color: "#3b82f6",
-    },
-    {
-      id: "linkedin",
-      label: "LinkedIn",
-      username: "in/yourusername",
-      url: "https://linkedin.com/in/yourusername",
-      icon: <AArrowUpIcon size={20} />,
-      color: "#0a66c2",
-    },
-  ];
 
   return (
     <div className="contact-page">

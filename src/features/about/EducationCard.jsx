@@ -1,4 +1,3 @@
-import React from "react";
 import { GraduationCap, Calendar, Award, Building2 } from "lucide-react";
 import "./about.css";
 

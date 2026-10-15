@@ -15,15 +15,13 @@ export function Card({ section, onClose }) {
 
   const [sidebarWidth, setSidebarWidth] = useState(30);
   const [currentFile, setCurrentFile] = useState(() =>
-    findFirstFile(
-      PORTFOLIO_SECTIONS.find((item) => item.id === section.id)
-    )
+    findFirstFile(PORTFOLIO_SECTIONS.find((item) => item.id === section.id)),
   );
   const [filePath, setFilePath] = useState([]);
 
   useEffect(() => {
     const selectedSection = PORTFOLIO_SECTIONS.find(
-      (item) => item.id === section.id
+      (item) => item.id === section.id,
     );
 
     setCurrentFile(findFirstFile(selectedSection));
@@ -56,8 +54,7 @@ export function Card({ section, onClose }) {
     if (!cardWidth) return;
 
     const handleMouseMove = (moveEvent) => {
-      const newWidth =
-        startWidth + (moveEvent.clientX - startX);
+      const newWidth = startWidth + (moveEvent.clientX - startX);
 
       const percentage = (newWidth / cardWidth) * 100;
 
@@ -120,11 +117,7 @@ export function Card({ section, onClose }) {
   );
 
   return (
-    <Draggable
-      nodeRef={nodeRef}
-      handle=".title-bar"
-      bounds="parent"
-    >
+    <Draggable nodeRef={nodeRef} handle=".title-bar" bounds="parent">
       <div ref={nodeRef} className="card">
         <TitleBar
           title={currentFile?.label || section.label}
@@ -132,10 +125,7 @@ export function Card({ section, onClose }) {
         />
 
         <div className="content">
-          <div
-            className="leftSide"
-            style={{ width: `${sidebarWidth}%` }}
-          >
+          <div className="leftSide" style={{ width: `${sidebarWidth}%` }}>
             <SidebarTree
               items={PORTFOLIO_SECTIONS}
               activeFile={currentFile}
@@ -155,15 +145,11 @@ export function Card({ section, onClose }) {
             {renderBreadcrumb()}
 
             {currentFile ? (
-              <div className="file-view">
-                {renderFileContent()}
-              </div>
+              <div className="file-view">{renderFileContent()}</div>
             ) : (
               <div className="empty-folder">
                 <div className="empty-folder-icon">📁</div>
-                <p>
-                  Select a file from the sidebar to view its contents.
-                </p>
+                <p>Select a file from the sidebar to view its contents.</p>
               </div>
             )}
           </div>
