@@ -283,14 +283,31 @@
   font-weight: 700;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(164, 53, 207, 0.18);
+  cursor: pointer;
+  font-family: inherit;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .about-resume-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 7px 18px rgba(164, 53, 207, 0.25);
+}
+
+.about-projects-button {
+  background: #ffffff;
+  color: #7e22ce;
+  border: 1.5px solid #c084fc;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.12);
+}
+
+.about-projects-button:hover {
+  background: #faf5ff;
+  border-color: #9333ea;
+  color: #581c87;
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.2);
 }
 
 .about-resume-button:focus-visible {

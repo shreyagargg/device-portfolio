@@ -10,7 +10,14 @@ import { findFirstFile } from "./NavigationUtils";
 
 import "./style.css";
 
-export function Card({ section, onClose }) {
+export function Card({
+  section,
+  onClose,
+  onMinimize,
+  onMaximize,
+  isMaximized = false,
+  isMinimized = false,
+}) {
   const nodeRef = useRef(null);
 
   const [sidebarWidth, setSidebarWidth] = useState(20);
@@ -67,7 +74,7 @@ export function Card({ section, onClose }) {
     const FileComponent = FILE_REGISTRY[currentFile.id];
 
     if (FileComponent) {
-      return <FileComponent />;
+      return <FileComponent onNavigate={handleFileOpen} />;
     }
 
     return (
@@ -108,11 +115,24 @@ export function Card({ section, onClose }) {
   );
 
   return (
-    <Draggable nodeRef={nodeRef} handle=".title-bar" bounds="parent">
-      <div ref={nodeRef} className="card">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".title-bar"
+      bounds="parent"
+      disabled={isMaximized}
+      position={isMaximized ? { x: 0, y: 0 } : undefined}
+    >
+      <div
+        ref={nodeRef}
+        className={`card ${isMaximized ? "maximized" : ""}`}
+        style={{ display: isMinimized ? "none" : "flex" }}
+      >
         <TitleBar
           title={currentFile?.label || section.label}
           onClose={onClose}
+          onMinimize={onMinimize}
+          onMaximize={onMaximize}
+          isMaximized={isMaximized}
         />
 
         <div className="content">

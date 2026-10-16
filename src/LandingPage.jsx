@@ -8,6 +8,27 @@ import { TaskBar } from "./component/TaskBar";
 
 export function LandingPage() {
   const [openCard, setOpenCard] = useState(null);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(false);
+
+  const handleOpenSection = (section) => {
+    setOpenCard(section);
+    setIsMinimized(false);
+  };
+
+  const handleCloseWindow = () => {
+    setOpenCard(null);
+    setIsMinimized(false);
+    setIsMaximized(false);
+  };
+
+  const handleToggleMinimize = () => {
+    setIsMinimized((prev) => !prev);
+  };
+
+  const handleToggleMaximize = () => {
+    setIsMaximized((prev) => !prev);
+  };
 
   return (
     <div className="wallpaper">
@@ -17,7 +38,7 @@ export function LandingPage() {
           <DesktopIcon
             key={section.id}
             label={section.label}
-            onClick={() => setOpenCard(section)}
+            onClick={() => handleOpenSection(section)}
           />
         ))}
       </div>
@@ -26,11 +47,23 @@ export function LandingPage() {
         <Card
           key={openCard.id}
           section={openCard}
-          onClose={() => setOpenCard(null)}
+          isMinimized={isMinimized}
+          isMaximized={isMaximized}
+          onMinimize={() => setIsMinimized(true)}
+          onMaximize={handleToggleMaximize}
+          onClose={handleCloseWindow}
         />
       )}
 
-      <TaskBar />
+      <TaskBar
+        openCard={openCard}
+        isMinimized={isMinimized}
+        isMaximized={isMaximized}
+        onToggleMinimize={handleToggleMinimize}
+        onToggleMaximize={handleToggleMaximize}
+        onCloseWindow={handleCloseWindow}
+        onOpenSection={handleOpenSection}
+      />
     </div>
   );
 }

@@ -1,11 +1,25 @@
 import profile from "../../assets/profile-pht.png";
-import { Download , Code2 , Sparkles , CheckCircle2 } from "lucide-react";
+import { Download, Code2, Sparkles, CheckCircle2, FolderGit2 } from "lucide-react";
 import "./about.css";
 import Resume from "./../../assets/Resume_Oct.pdf";
+import { PORTFOLIO_SECTIONS } from "../../constants/navigation";
 
 const recentTechStack = ["React JS","JavaScript","Node.js","Express.js","Android","Java","Git"];
 
-export function AboutCard() {
+export function AboutCard({ onNavigate }) {
+  const handleViewProjects = (e) => {
+    e.preventDefault();
+    if (onNavigate) {
+      const projectsFolder = PORTFOLIO_SECTIONS.find((s) => s.id === "projects");
+      const overviewFile =
+        projectsFolder?.children?.find((c) => c.id === "overview") || {
+          id: "overview",
+          label: "Overview",
+          type: "file",
+        };
+      onNavigate(overviewFile, projectsFolder ? [projectsFolder] : []);
+    }
+  };
   return (
     <section className="about" aria-label="About me">
       {/* Profile */}
@@ -60,16 +74,14 @@ export function AboutCard() {
             Download Resume
           </a>
 
-          <a
-            href= "#projects"
-            className="about-resume-button"
-            // download="Shreya-Garg-Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            className="about-resume-button about-projects-button"
+            onClick={handleViewProjects}
           >
-            <Download size={17} />
+            <FolderGit2 size={17} />
             View Projects
-          </a>
+          </button>
         </div>
 
         {/* Recent tech stack */}

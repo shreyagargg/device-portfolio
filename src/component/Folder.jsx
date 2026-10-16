@@ -19,6 +19,14 @@ export function DesktopIcon({ label, onClick }) {
         <button
           className="desktop-icon-btn"
           onDoubleClick={onClick}
+          onClick={(e) => {
+            if (
+              typeof window !== "undefined" &&
+              (window.innerWidth <= 768 || window.matchMedia("(pointer: coarse)").matches)
+            ) {
+              onClick(e);
+            }
+          }}
         >
           <FolderIcon />
 

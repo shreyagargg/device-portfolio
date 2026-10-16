@@ -17,5 +17,7 @@ export const FILE_REGISTRY = {
   contact: ContactPage,
   skills: SkillsCard,
   experience: Experience,
-  overview: ProjectScreen
+  overview: ProjectScreen,
+  syai: ProjectScreen,
+  finance: ProjectScreen
 };
