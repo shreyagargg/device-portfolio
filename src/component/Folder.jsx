@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Draggable from "react-draggable";
 import { FolderIcon } from "./FolderIcon";
 import "./style.css"

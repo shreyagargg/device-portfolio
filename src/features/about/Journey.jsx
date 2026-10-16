@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TIMELINE_DATA } from "../../constants/TimelineData";
-// import "./style.css";
+import "./about.css";
 
 export function Journey() {
   return (

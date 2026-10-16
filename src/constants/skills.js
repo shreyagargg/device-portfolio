@@ -5,7 +5,7 @@ export const skillsData = [
     category: 'Languages',
     level: 'Advanced',
     proficiency: 90,
-    docUrl: 'https://isocpp.org',
+    docUrl: 'https://dev.java',
     iconText: 'J',
     bgColor: '#818cf8',
     textColor: '#ffffff',
@@ -39,13 +39,13 @@ export const skillsData = [
     id: 'kotlin',
     name: 'Kotlin',
     category: 'Languages',
-    level: 'Beginner',
-    proficiency: 95,
-    docUrl: 'https://code.visualstudio.com',
-    iconText: 'k',
+    level: 'Intermediate',
+    proficiency: 85,
+    docUrl: 'https://kotlinlang.org',
+    iconText: 'Kt',
     bgColor: '#a78bfa',
     textColor: '#ffffff',
-    description: 'Debugging, Extension Ecosystem & Command Line CLI'
+    description: 'Modern Android Development, Coroutines & Type-Safe Architecture'
   },
   {
     id: 'react',
@@ -125,23 +125,23 @@ export const skillsData = [
     category: 'Tools',
     level: 'Advanced',
     proficiency: 88,
-    docUrl: 'https://git-scm.com',
-    iconText: 'Git',
-    bgColor: '#f43f5e',
-    textColor: '#ffffff',
-    description: 'Version Control, Branching Workflows, PR Reviews & Actions'
+    docUrl: 'https://developer.android.com/studio',
+    iconText: 'AS',
+    bgColor: '#3ddc84',
+    textColor: '#073042',
+    description: 'Android SDK, Gradle build system, Emulator & Jetpack libraries'
   },
     {
     id: 'figma',
     name: 'Figma',
     category: 'Tools',
-    level: 'Beginner',
-    proficiency: 88,
-    docUrl: 'https://git-scm.com',
-    iconText: 'Git',
-    bgColor: '#f43f5e',
+    level: 'Intermediate',
+    proficiency: 80,
+    docUrl: 'https://help.figma.com',
+    iconText: 'Fig',
+    bgColor: '#a259ff',
     textColor: '#ffffff',
-    description: 'Version Control, Branching Workflows, PR Reviews & Actions'
+    description: 'UI/UX wireframing, component design systems & interactive prototypes'
   },
   {
     id: 'vscode',

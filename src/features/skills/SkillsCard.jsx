@@ -75,7 +75,7 @@ export function SkillsCard() {
           <div className="leetcode-info">
             <div className="leetcode-heading">
               <h3>LeetCode &amp; Problem Solving</h3>
-              <span className="leetcode-badge">350+ Solved</span>
+              <span className="leetcode-badge">400+ Solved</span>
             </div>
 
             <p>
@@ -86,7 +86,7 @@ export function SkillsCard() {
         </div>
 
         <a
-          href="https://leetcode.com"
+          href="https://leetcode.com/u/ShreyaGarg63/"
           target="_blank"
           rel="noreferrer"
           className="leetcode-link"

@@ -6,6 +6,7 @@ import { EducationTimeline } from "../features/about/EducationTimeline";
 import { ContactPage } from "../features/contact/ContactPage";
 import { SkillsCard } from "../features/skills/SkillsCard";
 import { Experience } from "../features/experience/Experience";
+import { ProjectScreen } from "../features/projects/ProjectScreen";
 
 export const FILE_REGISTRY = {
   introduction: AboutCard,
@@ -15,5 +16,6 @@ export const FILE_REGISTRY = {
   education: EducationTimeline,
   contact: ContactPage,
   skills: SkillsCard,
-  experience: Experience
+  experience: Experience,
+  overview: ProjectScreen
 };

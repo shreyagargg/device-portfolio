@@ -1,4 +1,4 @@
-import { Mail, ExternalLink, AArrowUpIcon, Code2, Globe, PackageIcon, MapPin, Copy, Check, Send, ArrowUpRight, PowerIcon, Wand2,} from "lucide-react";
+import { Mail, Code2, Link2, MapPin, ArrowUpRight, PowerIcon, Phone } from "lucide-react";
 export const contactDetails = [
     {
       id: "email",
@@ -9,12 +9,13 @@ export const contactDetails = [
       bgColor: "#a78bfa",
       iconColor: "#ffffff",
     },
+    
     {
       id: "phone",
       label: "Phone",
       value: "+91 7703858942",
       type: "copy",
-      icon: Wand2,
+      icon: Phone,
       bgColor: "#e879f9",
       iconColor: "#ffffff",
     },
@@ -63,7 +64,7 @@ export const contactDetails = [
       value: "https://shreyagargg.github.io/portfolio/",
       url: "https://shreyagargg.github.io/portfolio/",
       type: "link",
-      icon: Globe,
+      icon: Link2,
       bgColor: "#06b6d4",
       iconColor: "#ffffff",
     },

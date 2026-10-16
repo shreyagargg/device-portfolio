@@ -1,28 +1,16 @@
 import profile from "../../assets/profile-pht.png";
-import { Download, Code2, Sparkles, CheckCircle2, FileText} from "lucide-react";
+import { Download , Code2 , Sparkles , CheckCircle2 } from "lucide-react";
 import "./about.css";
-import Resume from "./../../assests/Resume_Oct.pdf";
+import Resume from "./../../assets/Resume_Oct.pdf";
 
-const recentTechStack = [
-  "React JS",
-  "JavaScript",
-  "Node.js",
-  "Express.js",
-  "Android",
-  "Java",
-  "Git",
-];
+const recentTechStack = ["React JS","JavaScript","Node.js","Express.js","Android","Java","Git"];
 
 export function AboutCard() {
   return (
     <section className="about" aria-label="About me">
       {/* Profile */}
       <div className="about-profile">
-        <img
-          src={profile}
-          alt="Shreya Garg"
-          className="about-image"
-        />
+        <img src={profile} alt="Shreya Garg" className="about-image" />
 
         <span className="about-image-status">
           <span className="about-status-dot" />
@@ -42,9 +30,7 @@ export function AboutCard() {
             <h1 className="about-name">Shreya Garg</h1>
 
             <div className="about-role-row">
-              <h2 className="about-role">
-                Full Stack Developer
-              </h2>
+              <h2 className="about-role">Full Stack Developer</h2>
 
               <span className="about-online">
                 <span className="about-status-dot" />
@@ -55,29 +41,35 @@ export function AboutCard() {
         </div>
 
         <p className="about-description">
-          Full-stack &amp; Android developer building apps people
-          enjoy using. Creator of <strong>SyAi</strong>, an AI
-          productivity assistant. Solved{" "}
-          <strong>400+ LeetCode problems</strong> with a
-          1500+ contest rating. Currently exploring system
-          design and backend development with Node.js.
+          Full-stack &amp; Android developer building apps people enjoy using.
+          Creator of <strong>SyAi</strong>, an AI productivity assistant. Solved{" "}
+          <strong>400+ LeetCode problems</strong> with a 1500+ contest rating.
+          Currently exploring system design and backend development with Node.js.
         </p>
 
         {/* Resume */}
         <div className="about-actions">
           <a
-            href= {Resume}
+            href={Resume}
             className="about-resume-button"
             download="Shreya-Garg-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Download size={17} />
             Download Resume
           </a>
 
-          <span className="about-resume-note">
-            <FileText size={14} />
-            PDF Resume
-          </span>
+          <a
+            href= "#projects"
+            className="about-resume-button"
+            // download="Shreya-Garg-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Download size={17} />
+            View Projects
+          </a>
         </div>
 
         {/* Recent tech stack */}

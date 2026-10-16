@@ -16,7 +16,7 @@ export const education = [
         {
         id: 'ed3',
         degree: 'B Tech',
-        institution: 'SRM Unversity',
+        institution: 'SRM University',
         year: '2022-2026',
         marks: '8.1 cgpa',
     },

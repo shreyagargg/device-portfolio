@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Mail, ExternalLink, Copy, Check, Send} from "lucide-react";
 import "./ContactPage.css";
 import { contactDetails } from "./../../constants/contact"
@@ -23,7 +23,7 @@ export function ContactPage() {
         setCopiedId(null);
         setToastMessage(null);
       }, 2000);
-    } catch (error) {
+    } catch {
       setToastMessage("Unable to copy. Please copy it manually.");
       setTimeout(() => setToastMessage(null), 2000);
     }

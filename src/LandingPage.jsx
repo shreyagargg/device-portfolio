@@ -23,7 +23,11 @@ export function LandingPage() {
       </div>
 
       {openCard && (
-        <Card section={openCard} onClose={() => setOpenCard(false)} />
+        <Card
+          key={openCard.id}
+          section={openCard}
+          onClose={() => setOpenCard(null)}
+        />
       )}
 
       <TaskBar />

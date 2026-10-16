@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState, Fragment } from "react";
 import Draggable from "react-draggable";
 
 import { TitleBar } from "./TitleBar";
@@ -13,20 +13,11 @@ import "./style.css";
 export function Card({ section, onClose }) {
   const nodeRef = useRef(null);
 
-  const [sidebarWidth, setSidebarWidth] = useState(30);
+  const [sidebarWidth, setSidebarWidth] = useState(20);
   const [currentFile, setCurrentFile] = useState(() =>
     findFirstFile(PORTFOLIO_SECTIONS.find((item) => item.id === section.id)),
   );
   const [filePath, setFilePath] = useState([]);
-
-  useEffect(() => {
-    const selectedSection = PORTFOLIO_SECTIONS.find(
-      (item) => item.id === section.id,
-    );
-
-    setCurrentFile(findFirstFile(selectedSection));
-    setFilePath([]);
-  }, [section.id]);
 
   const handleFileOpen = (file, path) => {
     setCurrentFile(file);
@@ -101,10 +92,10 @@ export function Card({ section, onClose }) {
       <span>Home</span>
 
       {filePath.map((item, index) => (
-        <React.Fragment key={`${item.id}-${index}`}>
+        <Fragment key={`${item.id}-${index}`}>
           <span>›</span>
           <span>{item.label}</span>
-        </React.Fragment>
+        </Fragment>
       ))}
 
       {currentFile && (
