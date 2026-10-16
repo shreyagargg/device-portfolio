@@ -16,13 +16,13 @@
   gap: 8px;
 }
 
-.skills-heading {
+/* .features-heading {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.skills-heading-icon {
+.features-heading-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,15 +35,15 @@
   color: #581c87;
   transform: rotate(-6deg);
   box-shadow: 0 2px 4px #0000000d;
-}
+} */
 
-.skills-heading h1 {
+/* .features-heading h1 {
   margin: 0;
   color: #0f172a;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.6px;
-}
+} */
 
 .skills-subtitle {
   max-width: 420px;

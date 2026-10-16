@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Briefcase, Building2, ChevronDown, ChevronUp, Zap, CheckCircle2, Rocket, Clock, Code,} from "lucide-react";
 import { experienceData } from "./../../constants/experience";
 import "./experience.css";
+import "./../features.css"
 
 const roleTypes = ["All", "Internship", "Fulltime", "Open Source"];
 
@@ -29,10 +30,10 @@ export function Experience() {
       <header className="experience-header">
         <div className="experience-heading-group">
           <div className="experience-title-row">
-            <div className="experience-title-icon">
+            <div className="features-heading-icon">
               <Briefcase size={20} />
             </div>
-            <h1 className="experience-title">Experience</h1>
+            <h1 className="features-heading">Experience</h1>
             <span className="career-badge">
               <Rocket size={14} />
               Career Journey

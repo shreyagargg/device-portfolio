@@ -1,8 +1,9 @@
 
-import React, { useMemo, useState } from "react";
-import "./skills.css";
-import { Cpu, Trophy, ExternalLink, Search } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Cpu, Trophy, ExternalLink, Search} from "lucide-react";
 import { skillsData } from "../../constants/skills";
+import "./skills.css";
+import "./../features.css"
 
 export function SkillsCard() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -33,8 +34,8 @@ export function SkillsCard() {
     <div className="skills-card">
       {/* Header */}
       <header className="skills-header">
-        <div className="skills-heading">
-          <div className="skills-heading-icon">
+        <div className="features-heading">
+          <div className="features-heading-icon">
             <Cpu size={20} />
           </div>
 

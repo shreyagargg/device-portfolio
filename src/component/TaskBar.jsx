@@ -18,7 +18,7 @@ export function TaskBar(){
 
     const date = now.toLocaleDateString("en-In", {
         day: "2-digit",
-        minute: "2-digit",
+        month: "2-digit",
         year: "numeric"
     })
 

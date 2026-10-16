@@ -4,26 +4,26 @@ export const PORTFOLIO_SECTIONS = [
     label: "About",
     type: "folder",
     children: [
-      {
-        id: "introduction",
-        label: "Introduction",
-        type: "file",
-      },
-      {
-        id: "education",
-        label: "Education",
-        type: "file",
-      },
-      {
-        id: "timeline",
-        label: "Timeline",
-        type: "file",
-      },
-      {
-        id: "session",
-        label: "Session Info",
-        type: "file",
-      },
+    {
+      id: "introduction",
+      label: "Introduction",
+      type: "file",
+    },
+    {
+      id: "education",
+      label: "Education",
+      type: "file",
+    },
+    {
+      id: "timeline",
+      label: "Timeline",
+      type: "file",
+    },
+    {
+      id: "session",
+      label: "Session Info",
+      type: "file",
+    },
     ],
   },
 
@@ -32,17 +32,21 @@ export const PORTFOLIO_SECTIONS = [
     label: "Projects",
     type: "folder",
     children: [
-      {
-        id: "syai",
-        label: "SyAi",
-        type: "file",
-      },
-
-      {
-        id: "finance",
-        label: "Finance Backend",
-        type: "file",
-      },
+    {
+      id: "overview",
+      label: "Overview",
+      type: "file",
+    },
+    {
+      id: "syai",
+      label: "SyAi",
+      type: "file",
+    },
+    {
+      id: "finance",
+      label: "Finance Backend",
+      type: "file",
+    },
     ],
   },
 
