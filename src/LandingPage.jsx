@@ -58,11 +58,7 @@ export function LandingPage() {
       <TaskBar
         openCard={openCard}
         isMinimized={isMinimized}
-        isMaximized={isMaximized}
         onToggleMinimize={handleToggleMinimize}
-        onToggleMaximize={handleToggleMaximize}
-        onCloseWindow={handleCloseWindow}
-        onOpenSection={handleOpenSection}
       />
     </div>
   );

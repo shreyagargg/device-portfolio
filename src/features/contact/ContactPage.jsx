@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, ExternalLink, Copy, Check, Send} from "lucide-react";
 import "./ContactPage.css";
 import { contactDetails } from "./../../constants/contact"
+import { Html, Head, Body, Container, Heading, Text } from "react-email";
 
 export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);

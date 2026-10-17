@@ -6,13 +6,12 @@ import "./../features.css"
 
 export function EducationTimeline() {
   return (
-    <div style={{ padding: "8px", backgroundColor: "white" }}>
+    <div style={{ padding: "6px", backgroundColor: "white" }}>
 
       <div className="features-heading">
         <div className="features-heading-icon">
           <GraduationCap size={20} />
         </div>
-
         <h1>Education</h1>
       </div>
 
