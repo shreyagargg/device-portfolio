@@ -53,18 +53,18 @@ export const PORTFOLIO_SECTIONS = [
   {
     id: "skills",
     label: "Skills",
-    type: "file",
+    type: "folder",
   },
 
   {
     id: "experience",
     label: "Experience",
-    type: "file",
+    type: "folder",
   },
 
   {
     id: "contact",
     label: "Contact",
-    type: "file",
+    type: "folder",
   },
 ];

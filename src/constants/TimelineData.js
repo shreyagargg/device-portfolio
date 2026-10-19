@@ -1,29 +1,29 @@
 export const TIMELINE_DATA = [
   {
-    id: "tl-2022",
+    id: "tl-1",
     year: "2022",
     tag: "CS Foundation",
     title: "B.Tech in Computer Science Started",
     description:
       "Embarked on Computer Science Engineering journey at SRM University. Mastered core fundamentals of Object-Oriented Programming, Java, C++, and Data Structures & Algorithms.",
-    techStack: ["Java", "C++", "DSA", "OOP", "Git"],
+    techStack: ["Java", "Python", "DSA", "OOP", "DBMS"],
     status: "Completed",
   },
   {
-    id: "tl-2024",
-    year: "2024",
-    tag: "Frontend Mastery",
+    id: "tl-2",
+    year: "2026",
+    tag: "Web Development Internship",
     title: "React Ecosystem & Problem Solving",
     description:
-      "Dived deep into modern web development with React.js, JavaScript (ES6+), and component-driven UI architecture. Solved 400+ algorithmic problems on LeetCode with a 1500+ contest rating.",
+      "Dived deep into modern web development with React.js, JavaScript (ES6+), and component-driven UI architecture.",
     techStack: ["React.js", "JavaScript", "Tailwind CSS", "LeetCode", "REST APIs"],
     status: "Completed",
   },
   {
-    id: "tl-2025",
+    id: "tl-2026",
     year: "2025",
-    tag: "Full-Stack & Mobile",
-    title: "SyAi Assistant & Android Engineering",
+    tag: "TGT Computer",
+    title: "Teach computer for class 6-8",
     description:
       "Architected full-stack platforms including SyAi (AI productivity assistant) and Finance microservices with Node.js and PostgreSQL. Built native Android apps with Kotlin and offline-first Room database.",
     techStack: ["Node.js", "Express", "PostgreSQL", "Android", "Kotlin", "OpenAI API"],
