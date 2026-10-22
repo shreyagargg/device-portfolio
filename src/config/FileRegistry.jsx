@@ -5,7 +5,8 @@ import { EducationTimeline } from "../features/about/EducationTimeline";
 import { ContactPage } from "../features/contact/ContactPage";
 import { SkillsCard } from "../features/skills/SkillsCard";
 import { Experience } from "../features/experience/Experience";
-import { ProjectScreen } from "../features/projects/ProjectScreen";
+import { ProjectScreen } from "../features/project/ProjectScreen";
+import { SyAiScreen } from "../features/project/SyAi"
 
 export const FILE_REGISTRY = {
   introduction: AboutCard,
@@ -16,6 +17,6 @@ export const FILE_REGISTRY = {
   skills: SkillsCard,
   experience: Experience,
   overview: ProjectScreen,
-  syai: ProjectScreen,
+  syai: SyAiScreen,
   finance: ProjectScreen
 };

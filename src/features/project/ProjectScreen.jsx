@@ -10,7 +10,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { PROJECTS_DATA } from "../../constants/projects";
-import "./projects.css";
+import "./project.css";
 import "./../features.css";
 
 export function ProjectScreen() {
